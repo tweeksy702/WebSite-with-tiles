@@ -1,0 +1,255 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  color: #4f3d2f;
+  background: linear-gradient(180deg, #fffdf8 0%, #fff9ec 55%, #fff6dd 100%);
+}
+
+.container {
+  width: min(1140px, 92%);
+  margin: 0 auto;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(255, 250, 240, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid #f3ddae;
+}
+
+.header__content,
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 0;
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.brand p,
+.brand strong {
+  margin: 0;
+}
+
+.brand__logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  background: linear-gradient(145deg, #f4d687, #f8e7b6);
+  color: #6b4a2f;
+  box-shadow: 0 6px 16px rgba(205, 162, 86, 0.35);
+}
+
+.contacts {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.contact-item {
+  text-decoration: none;
+  color: #6b5038;
+  background: #fff6dd;
+  border: 1px solid #f1d9a2;
+  border-radius: 999px;
+  padding: 10px 14px;
+  font-size: 0.92rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-2px);
+  background: #fff0ca;
+  box-shadow: 0 8px 18px rgba(208, 166, 99, 0.25);
+}
+
+.hero {
+  padding: 54px 0 26px;
+}
+
+.hero h2 {
+  margin: 0 0 10px;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+}
+
+.hero p {
+  margin: 0;
+  max-width: 760px;
+  color: #73573e;
+}
+
+.catalog {
+  padding: 24px 0 42px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.tile-card {
+  overflow: hidden;
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid #f1deb4;
+  box-shadow: 0 10px 24px rgba(201, 155, 74, 0.15);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.tile-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 30px rgba(201, 155, 74, 0.25);
+}
+
+.tile-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.tile-card:hover img {
+  transform: scale(1.04);
+}
+
+.tile-card__body {
+  padding: 16px;
+}
+
+.tile-card h3 {
+  margin: 0 0 10px;
+  font-size: 1rem;
+}
+
+.price {
+  margin: 0 0 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.price__current {
+  font-weight: 700;
+  color: #614328;
+}
+
+.price__old {
+  color: #ad8f6b;
+  text-decoration: line-through;
+}
+
+.desc {
+  margin: 0;
+  color: #78614a;
+  font-size: 0.94rem;
+  line-height: 1.45;
+}
+
+.calculator {
+  margin: 8px auto 54px;
+  border-radius: 18px;
+  padding: 26px;
+  background: linear-gradient(165deg, #fff9e9, #fffefb);
+  border: 1px solid #efd9a5;
+  box-shadow: 0 12px 28px rgba(201, 155, 74, 0.14);
+}
+
+.calculator h2 {
+  margin: 0 0 8px;
+}
+
+.calculator p {
+  margin: 0 0 18px;
+  color: #75583e;
+}
+
+.calc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  align-items: end;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.95rem;
+  color: #5d4733;
+}
+
+input {
+  width: 100%;
+  border: 1px solid #e7cc94;
+  border-radius: 10px;
+  padding: 11px 12px;
+  font-size: 1rem;
+  background: #fffef9;
+  color: #4f3d2f;
+}
+
+input:focus {
+  outline: 2px solid #f2d38e;
+  border-color: #e0bc71;
+}
+
+button {
+  border: none;
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  color: #4b3521;
+  background: linear-gradient(145deg, #f7d98f, #f3c765);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(196, 146, 63, 0.25);
+}
+
+.result {
+  margin-top: 16px;
+  padding: 14px;
+  border-radius: 12px;
+  background: #fffef9;
+  border: 1px dashed #e8cb8f;
+  color: #614b35;
+}
+
+.footer {
+  background: linear-gradient(180deg, #fff2cb, #fcebb8);
+  border-top: 1px solid #efd49d;
+}
+
+.brand--footer p {
+  color: #7a6044;
+}
+
+@media (max-width: 700px) {
+  .hero {
+    padding-top: 34px;
+  }
+}

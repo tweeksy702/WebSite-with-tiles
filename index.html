@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Теплая Плитка</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./plitka.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__content">
+      <div class="brand">
+        <div class="brand__logo">ТП</div>
+        <div>
+          <h1>Теплая Плитка</h1>
+          <p>Дизайнерская строительная плитка</p>
+        </div>
+      </div>
+
+      <nav class="contacts contacts--top">
+        <a href="tel:+79991234567" class="contact-item">📞 +7 (999) 123-45-67</a>
+        <a href="mailto:hello@teplayaplitka.ru" class="contact-item">✉️ hello@teplayaplitka.ru</a>
+        <a href="#" class="contact-item">📍 Москва, ул. Архитекторов, 12</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <h2>Подберите плитку под ваш проект</h2>
+      <p>
+        Эстетичная, прочная и теплая по оттенку коллекция для фасадов, террас и интерьера.
+        Все позиции уже со скидкой.
+      </p>
+    </section>
+
+    <section class="catalog container">
+      <article class="tile-card">
+        <img src="https://images.unsplash.com/photo-1604709177225-055f99402ea3?auto=format&fit=crop&w=900&q=80" alt="Бежевая фасадная плитка" />
+        <div class="tile-card__body">
+          <h3>Плитка фасадная «Песчаный штрих»</h3>
+          <p class="price">
+            <span class="price__current">1 250 ₽ / м²</span>
+            <span class="price__old">1 500 ₽ / м²</span>
+          </p>
+          <p class="desc">Матовая текстура, устойчива к влаге и перепадам температуры. Отлично смотрится в теплых экстерьерах.</p>
+        </div>
+      </article>
+
+      <article class="tile-card">
+        <img src="https://images.unsplash.com/photo-1616046229478-9901c5536a45?auto=format&fit=crop&w=900&q=80" alt="Светлая керамическая плитка" />
+        <div class="tile-card__body">
+          <h3>Керамоплитка «Медовый свет»</h3>
+          <p class="price">
+            <span class="price__current">1 480 ₽ / м²</span>
+            <span class="price__old">1 776 ₽ / м²</span>
+          </p>
+          <p class="desc">Нежный теплый оттенок для кухни и ванной. Легко очищается, не теряет насыщенность цвета.</p>
+        </div>
+      </article>
+
+      <article class="tile-card">
+        <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=900&q=80" alt="Декоративная плитка под камень" />
+        <div class="tile-card__body">
+          <h3>Декоративная плитка «Солнечный камень»</h3>
+          <p class="price">
+            <span class="price__current">1 690 ₽ / м²</span>
+            <span class="price__old">2 028 ₽ / м²</span>
+          </p>
+          <p class="desc">Выразительный рисунок под натуральный камень. Идеальна для акцентных стен и каминных зон.</p>
+        </div>
+      </article>
+
+      <article class="tile-card">
+        <img src="https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=900&q=80" alt="Плитка для террасы" />
+        <div class="tile-card__body">
+          <h3>Террасная плитка «Янтарный двор»</h3>
+          <p class="price">
+            <span class="price__current">1 990 ₽ / м²</span>
+            <span class="price__old">2 388 ₽ / м²</span>
+          </p>
+          <p class="desc">Противоскользящая поверхность и высокая прочность. Безопасный и красивый вариант для улицы.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="calculator container">
+      <h2>Калькулятор выгоды</h2>
+      <p>Сравните цену у нас и у конкурента. Конкурентская цена считается как +20% к нашей.</p>
+
+      <div class="calc-grid">
+        <label>
+          Площадь (м²)
+          <input type="number" id="area" min="1" value="20" />
+        </label>
+        <label>
+          Цена нашей плитки (₽ / м²)
+          <input type="number" id="ourPrice" min="1" value="1480" />
+        </label>
+        <button id="calculateBtn">Рассчитать выгоду</button>
+      </div>
+
+      <div class="result" id="resultBox">
+        <p>Укажите параметры и нажмите «Рассчитать выгоду».</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__content">
+      <div class="brand brand--footer">
+        <div class="brand__logo">ТП</div>
+        <div>
+          <strong>Теплая Плитка</strong>
+          <p>Красота в каждой детали</p>
+        </div>
+      </div>
+
+      <nav class="contacts contacts--bottom">
+        <a href="tel:+79991234567" class="contact-item">📞 +7 (999) 123-45-67</a>
+        <a href="mailto:hello@teplayaplitka.ru" class="contact-item">✉️ hello@teplayaplitka.ru</a>
+        <a href="#" class="contact-item">📍 Москва, ул. Архитекторов, 12</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="./plitka.js"></script>
+</body>
+</html>
